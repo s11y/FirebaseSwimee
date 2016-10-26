@@ -28,6 +28,13 @@ class TransmitViewController: UIViewController {
     private func configureNavBar() {
         self.title = "送信"
     }
+    
+    @IBOutlet private weak var searchIDTextField: UITextField!
+    @IBOutlet private weak var postTextField: UITextField!
+    
+    @IBAction private func selectTransmit() {
+        
+    }
 }
 
 

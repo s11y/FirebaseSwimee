@@ -28,6 +28,13 @@ class ReceiveViewController: UIViewController {
     private func configureNavBar() {
         self.title = "受信"
     }
+    
+    @IBOutlet private weak var searchIDTextField: UITextField!
+    @IBOutlet private weak var postTextView: UITextView!
+    
+    @IBAction private func selectReceive() {
+        
+    }
 }
 
 
