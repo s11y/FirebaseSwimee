@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>823561369684-h28v0kgolrqd15bcu8lnugmq3ngmv9om.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.823561369684-h28v0kgolrqd15bcu8lnugmq3ngmv9om</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDoyIMZmA4V-Iq9ty1zL0Cyl5gL8EM7vpw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>823561369684</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wataru.FireSwimee</string>
+	<key>PROJECT_ID</key>
+	<string>fireswimee-5ff40</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fireswimee-5ff40.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:823561369684:ios:9eecbeb18aa92ef3</string>
+	<key>DATABASE_URL</key>
+	<string>https://fireswimee-5ff40.firebaseio.com</string>
+</dict>
+</plist>
