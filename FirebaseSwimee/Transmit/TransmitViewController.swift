@@ -46,10 +46,18 @@ class TransmitViewController: UIViewController {
     private let ref = FIRDatabase.database().reference().child("idList")
     
     @IBAction private func selectTransmit() {
-        guard let id = searchIDTextField.text , let text = postTextField.text else { return }
-        if id == "" || text == "" { return }
+//        guard let id = searchIDTextField.text , let text = postTextField.text else { return }
+//        if id == "" || text == "" { return }
         
-        Network.postRequest(id, text)
+        let id = searchIDTextField.text.flatMap { $0.isEmpty ? nil : $0 }
+        let text = postTextField.text.flatMap { $0.isEmpty ? nil : $0 }
+        
+//        ref.child(id).setValue(["id": id, "text": text, "timestamps": FIRServerValue.timestamp()])
+        id.forEach { _id in
+            text.map { _text in
+                ref.child(_id).setValue(["id": _id, "text": _text, "timestamps": FIRServerValue.timestamp()])
+            }
+        }
     }
     
     private func configureNavBar() {

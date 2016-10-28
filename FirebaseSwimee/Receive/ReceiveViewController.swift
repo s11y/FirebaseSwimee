@@ -40,11 +40,45 @@ class ReceiveViewController: UIViewController {
     
     @IBAction private func selectReceive() {
         
-        guard let searchID = searchIDTextField.text else { return }
-        if searchID == "" { return }
-        
-        Network.getRequest(searchID) { (text) in
-            self.postTextView.text = text
+//        guard let searchID = searchIDTextField.text else { return }
+//        if searchID == "" { return }
+        searchIDTextField.text.forEach { searchID in
+            if searchID.isEmpty { return }
+            ref.child(searchID).observe(.value, with: { snapshot in
+                
+                print(snapshot) // コンソールで確認
+                
+                guard let postValue = snapshot.value as? [String: AnyObject] else {
+                    
+                    print("no snapshot.value")
+                    self.postTextView.text = "idに該当する投稿はありませんでした。"
+                    return
+                }
+                
+                print(postValue)
+                
+                var postText: String = ""
+                
+                let text = postValue["text"] as? String
+                
+                // タイムスタンプから時刻を取得
+//                let timestamps = postValue["timestamps"]! as? TimeInterval
+                let timeStamps = postValue["timestamps"].flatMap { $0 as? TimeInterval }
+//                let date = Date(timeIntervalSince1970: timestamps!/1000)
+                let date = timeStamps.flatMap { Date(timeIntervalSince1970: $0 / 1000) }
+                let formatter = DateFormatter()
+                formatter.locale = Locale(identifier: "ja_JP")
+                formatter.dateStyle = .medium // -> ex: 2016/10/29
+                formatter.timeStyle = .medium // -> ex: 13:20:08
+                
+                postText += "id: " + searchID + "\n"
+//                postText += "text: " + text! + "\n"
+                text.forEach { postText += "text:" + $0 + "\n" }
+//                postText += "date: " + formatter.string(from: date) + "\n"
+                date.forEach { postText += "date:" + formatter.string(from: $0) + "\n" }
+                
+                self.postTextView.text = postText
+            })
         }
     }
     

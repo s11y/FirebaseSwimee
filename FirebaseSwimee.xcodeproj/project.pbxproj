@@ -21,6 +21,7 @@
 		3923D5521DC050AC00474159 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923D5511DC050AC00474159 /* TabBarViewController.swift */; };
 		3923D5541DC0510100474159 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923D5531DC0510100474159 /* StoryboardInstantiable.swift */; };
 		3983752E1DC4745500CE08B2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3983752D1DC4745500CE08B2 /* Network.swift */; };
+		46D6AF7F1DC35BF400BA44C3 /* OptionalUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D6AF7E1DC35BF400BA44C3 /* OptionalUtility.swift */; };
 		610F059607997D79CE3A688A /* Pods_FirebaseSwimeeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E711DD8D143CF08963EC8C20 /* Pods_FirebaseSwimeeUITests.framework */; };
 		639B89A91DC2174200DEC956 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 639B89A81DC2174200DEC956 /* GoogleService-Info.plist */; };
 		C08463E487EC00E00CCABC7A /* Pods_FirebaseSwimee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041C383616D143200B06FD2 /* Pods_FirebaseSwimee.framework */; };
@@ -65,6 +66,7 @@
 		3923D5531DC0510100474159 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		3983752D1DC4745500CE08B2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Networking/Network.swift; sourceTree = "<group>"; };
 		3A18BD4A5E13E5C07527E896 /* Pods-FirebaseSwimeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSwimeeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSwimeeUITests/Pods-FirebaseSwimeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46D6AF7E1DC35BF400BA44C3 /* OptionalUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalUtility.swift; sourceTree = "<group>"; };
 		493B1A25F422160F21ED46DB /* Pods_FirebaseSwimeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSwimeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5710A8E555066B8724D37C94 /* Pods-FirebaseSwimee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSwimee.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSwimee/Pods-FirebaseSwimee.release.xcconfig"; sourceTree = "<group>"; };
 		639B89A81DC2174200DEC956 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				3923D5191DC04AFE00474159 /* LaunchScreen.storyboard */,
 				639B89A81DC2174200DEC956 /* GoogleService-Info.plist */,
 				3923D51C1DC04AFE00474159 /* Info.plist */,
+				46D6AF7E1DC35BF400BA44C3 /* OptionalUtility.swift */,
 			);
 			path = FirebaseSwimee;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				3923D5521DC050AC00474159 /* TabBarViewController.swift in Sources */,
 				3923D5541DC0510100474159 /* StoryboardInstantiable.swift in Sources */,
 				3983752E1DC4745500CE08B2 /* Network.swift in Sources */,
+				46D6AF7F1DC35BF400BA44C3 /* OptionalUtility.swift in Sources */,
 				3923D5111DC04AFE00474159 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
