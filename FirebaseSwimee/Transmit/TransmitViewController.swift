@@ -9,23 +9,39 @@
 import UIKit
 import Firebase
 
+
 // MARK: - TransmitViewController
 
 class TransmitViewController: UIViewController {
 
+    
     // MARK: UIViewController
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.configureNavBar()
-        configureTextField()
     }
+    
     
     // MARK: Private
     
-    @IBOutlet private weak var searchIDTextField: UITextField!
-    @IBOutlet private weak var postTextField: UITextField!
+    @IBOutlet private weak var searchIDTextField: UITextField! {
+        
+        didSet {
+            
+            searchIDTextField.delegate = self
+            searchIDTextField.keyboardType = .asciiCapable
+        }
+    }
+    
+    @IBOutlet private weak var postTextField: UITextField! {
+        
+        didSet {
+            
+            postTextField.delegate = self
+        }
+    }
     
     private let ref = FIRDatabase.database().reference().child("idList")
     
@@ -33,19 +49,11 @@ class TransmitViewController: UIViewController {
         guard let id = searchIDTextField.text , let text = postTextField.text else { return }
         if id == "" || text == "" { return }
         
-        ref.child(id).setValue(["id": id, "text": text, "timestamps": FIRServerValue.timestamp()])
+        Network.postRequest(id, text)
     }
     
     private func configureNavBar() {
         self.title = "送信"
-    }
-    
-    private func configureTextField() {
-        
-        searchIDTextField.delegate = self
-        searchIDTextField.keyboardType = .asciiCapable
-        
-        postTextField.delegate = self
     }
 }
 
