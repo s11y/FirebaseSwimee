@@ -51,13 +51,8 @@ class TransmitViewController: UIViewController {
         
         let id = searchIDTextField.text.flatMap { $0.isEmpty ? nil : $0 }
         let text = postTextField.text.flatMap { $0.isEmpty ? nil : $0 }
-        
+        Network.postRequest(id, text)
 //        ref.child(id).setValue(["id": id, "text": text, "timestamps": FIRServerValue.timestamp()])
-        id.forEach { _id in
-            text.map { _text in
-                ref.child(_id).setValue(["id": _id, "text": _text, "timestamps": FIRServerValue.timestamp()])
-            }
-        }
     }
     
     private func configureNavBar() {
