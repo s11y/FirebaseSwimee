@@ -40,10 +40,9 @@ class ReceiveViewController: UIViewController {
     
     @IBAction private func selectReceive() {
         
-        guard let searchID = searchIDTextField.text else { return }
-        if searchID == "" { return }
-        
-        Network.getRequest(searchID) { (text) in
+//        guard let searchID = searchIDTextField.text else { return }
+//        if searchID == "" { return }
+        Network.getRequest(searchIDTextField.text) { (text) in
             self.postTextView.text = text
         }
     }
